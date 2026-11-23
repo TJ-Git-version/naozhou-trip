@@ -211,14 +211,15 @@ svg.chart{width:100%;height:auto}
 .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius);box-shadow:var(--shadow)}
 .tbl-wrap .tbl{box-shadow:none;border-radius:0}
 @media(max-width:700px){
-  .tbl-wrap .tbl,.tbl-wrap .tide-table{min-width:600px}
+  .tbl-wrap .tbl-wide{min-width:600px}
   .tide-table td,.tide-table th{white-space:nowrap}
   .tbl{font-size:13px}
   .tbl th,.tbl td{padding:11px 12px}
 }
 .tbl-wrap{position:relative}
 @media(max-width:700px){
-  .tbl-wrap::after{
+  .tbl-wrap:has(.tbl-wide)::after,
+  .tbl-wrap:has(.tide-table)::after{
     content:"← 左右滑动查看 →";
     display:block;text-align:center;font-size:11px;color:var(--muted);
     padding:8px 0 2px;letter-spacing:.08em;
@@ -510,7 +511,7 @@ footer b{color:#e8f5f4;font-weight:600;display:block;font-size:13.5px;margin-bot
       </div>
     </div>
 
-    <div class="tbl-wrap reveal"><table class="tbl">
+    <div class="tbl-wrap reveal"><table class="tbl tbl-wide">
       <thead>
         <tr><th>方式</th><th>票价</th><th>航程</th><th>班次</th><th>备注</th></tr>
       </thead>
