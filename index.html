@@ -111,7 +111,7 @@ h1{
 
 /* ---------- LAYOUT ---------- */
 main{max-width:1080px;margin:0 auto;padding:0 18px}
-section{padding:clamp(46px,7vw,76px) 0;border-bottom:1px dashed var(--line)}
+section{padding:clamp(46px,7vw,76px) 0;border-bottom:1px dashed var(--line);scroll-margin-top:62px}
 section:last-of-type{border-bottom:0}
 .sec-head{display:flex;align-items:flex-end;gap:16px;margin-bottom:30px}
 .sec-num{
@@ -161,7 +161,7 @@ svg.chart{width:100%;height:auto}
 .tide-table th{font-size:12px;letter-spacing:.1em;color:var(--muted);font-weight:600}
 .tide-table td:first-child{font-weight:600;color:var(--deep)}
 .tide-table tr:last-child td{border-bottom:0}
-.pill{display:inline-block;font-size:12px;padding:3px 10px;border-radius:999px;background:var(--teal-soft);color:#0a6b68;font-weight:600}
+.pill{display:inline-block;font-size:12px;padding:3px 10px;border-radius:999px;background:var(--teal-soft);color:#0a6b68;font-weight:600;white-space:nowrap}
 .pill.coral{background:var(--coral-soft);color:#c14120}
 
 /* ---------- TIMELINE ---------- */
@@ -208,6 +208,13 @@ svg.chart{width:100%;height:auto}
 
 /* ---------- TABLES ---------- */
 .tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);font-size:14px}
+.tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius);box-shadow:var(--shadow)}
+.tbl-wrap .tbl{box-shadow:none;border-radius:0}
+@media(max-width:700px){
+  .tbl-wrap .tbl{min-width:600px}
+  .tbl{font-size:13px}
+  .tbl th,.tbl td{padding:11px 12px}
+}
 .tbl th{background:#f3efe4;font-size:12px;letter-spacing:.08em;color:#5c6b72;text-align:left;padding:13px 14px;font-weight:600}
 .tbl td{padding:13px 14px;border-top:1px solid var(--line);vertical-align:top}
 .tbl td.mono{font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -494,7 +501,7 @@ footer b{color:#e8f5f4;font-weight:600;display:block;font-size:13.5px;margin-bot
       </div>
     </div>
 
-    <table class="tbl reveal">
+    <div class="tbl-wrap reveal"><table class="tbl">
       <thead>
         <tr><th>方式</th><th>票价</th><th>航程</th><th>班次</th><th>备注</th></tr>
       </thead>
@@ -514,7 +521,7 @@ footer b{color:#e8f5f4;font-weight:600;display:block;font-size:13.5px;margin-bot
           <td>车能一起上岛，环岛最自由</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <div class="grid g2" style="margin-top:16px">
       <div class="card warn reveal">
@@ -538,7 +545,7 @@ footer b{color:#e8f5f4;font-weight:600;display:block;font-size:13.5px;margin-bot
       </div>
     </div>
 
-    <table class="tbl reveal">
+    <div class="tbl-wrap reveal"><table class="tbl">
       <thead><tr><th>项目</th><th>说明</th><th style="text-align:right">金额</th></tr></thead>
       <tbody>
         <tr><td>油费 + 过路费</td><td>往返约 300km</td><td class="mono" style="text-align:right">260–300 元</td></tr>
@@ -549,7 +556,7 @@ footer b{color:#e8f5f4;font-weight:600;display:block;font-size:13.5px;margin-bot
         <tr><td>赶海装备</td><td>头灯、鞋、手套、桶</td><td class="mono" style="text-align:right">60–100 元</td></tr>
         <tr class="total"><td>合计</td><td>2 人 1 车</td><td class="mono" style="text-align:right">约 1250–1900 元</td></tr>
       </tbody>
-    </table>
+    </table></div>
   </section>
 
   <!-- 7 -->
@@ -649,3 +656,4 @@ document.querySelectorAll('.check input').forEach(cb=>{
 </script>
 </body>
 </html>
+</div>
