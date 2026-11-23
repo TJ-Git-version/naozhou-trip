@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>硇洲岛两天一夜 · 火山岛赶海计划</title>
+<meta name="description" content="2026年11月25-26日，高州出发硇洲岛两天一夜自驾赶海攻略：潮汐、船班、时间表、预算与装备清单。">
+<style>
+:root{
+  --ink:#0a1d26;
+  --deep:#04232f;
+  --sea:#0b5f70;
+  --teal:#14a3a2;
+  --teal-soft:#d9f2ef;
+  --coral:#ff6a45;
+  --coral-soft:#ffe7df;
+  --sand:#f2e4cb;
+  --paper:#fbf8f2;
+  --line:#e3ded2;
+  --muted:#6b7b82;
+  --shadow:0 18px 40px -22px rgba(4,35,47,.45);
+  --radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(1200px 500px at 80% -10%, rgba(20,163,162,.45), transparent 60%),
+    radial-gradient(800px 400px at 10% 10%, rgba(255,106,69,.22), transparent 55%),
+    linear-gradient(160deg,#04232f 0%,#063444 45%,#0b5f70 100%);
+  color:#fff;
+  padding:clamp(48px,9vw,96px) 22px 0;
+}
+.hero::after{
+  content:"";
+  position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.13) 1px, transparent 1px);
+  background-size:26px 26px;
+  opacity:.5;
+  mask-image:linear-gradient(to bottom, #000 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;padding-bottom:clamp(60px,10vw,110px)}
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#9fe3df;font-weight:600;
+  border:1px solid rgba(159,227,223,.35);
+  padding:7px 16px;border-radius:999px;
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(4px);
+}
+.kicker .dot{width:6px;height:6px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px rgba(255,106,69,.18)}
+h1{
+  font-family:"Songti SC","Noto Serif SC",Georgia,serif;
+  font-size:clamp(56px,13vw,120px);
+  line-height:.95;
+  letter-spacing:.06em;
+  margin:26px 0 0;
+  font-weight:600;
+  text-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+.sub{
+  margin-top:18px;
+  font-size:clamp(15px,2.4vw,19px);
+  color:#cfe9ea;
+  letter-spacing:.12em;
+}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.badge{
+  font-size:13px;padding:8px 15px;border-radius:999px;
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.16);
+  color:#eaf7f6;
+  backdrop-filter:blur(6px);
+}
+.badge strong{color:#fff;font-weight:600}
+.wave{position:absolute;left:0;right:0;bottom:-1px;z-index:1;width:100%;height:auto}
+
+/* ---------- NAV ---------- */
+.toc{
+  position:sticky;top:0;z-index:40;
+  background:rgba(251,248,242,.86);
+  backdrop-filter:blur(14px) saturate(1.4);
+  border-bottom:1px solid var(--line);
+}
+.toc-inner{
+  max-width:1080px;margin:0 auto;padding:0 18px;
+  display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;
+}
+.toc-inner::-webkit-scrollbar{display:none}
+.toc a{
+  flex:0 0 auto;font-size:13.5px;color:var(--muted);padding:14px 13px;
+  border-bottom:2px solid transparent;transition:.2s;white-space:nowrap;
+}
+.toc a:hover{color:var(--sea)}
+.toc a.active{color:var(--deep);border-bottom-color:var(--teal);font-weight:600}
+
+/* ---------- LAYOUT ---------- */
+main{max-width:1080px;margin:0 auto;padding:0 18px}
+section{padding:clamp(46px,7vw,76px) 0;border-bottom:1px dashed var(--line)}
+section:last-of-type{border-bottom:0}
+.sec-head{display:flex;align-items:flex-end;gap:16px;margin-bottom:30px}
+.sec-num{
+  font-family:Georgia,serif;font-size:14px;letter-spacing:.18em;color:var(--teal);
+  border:1px solid var(--teal);border-radius:999px;padding:4px 12px;margin-bottom:8px;flex:0 0 auto;
+}
+h2{
+  font-family:"Songti SC","Noto Serif SC",Georgia,serif;
+  font-size:clamp(24px,4vw,34px);line-height:1.25;font-weight:600;letter-spacing:.02em;
+}
+.sec-sub{color:var(--muted);font-size:14px;margin-top:6px}
+.lead{font-size:15.5px;color:#33474f;max-width:760px;margin-bottom:26px}
+
+/* ---------- CARDS ---------- */
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:820px){.g3{grid-template-columns:1fr}.g2{grid-template-columns:1fr}}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow);position:relative;overflow:hidden;
+}
+.card .tag{
+  font-size:11.5px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;
+  display:block;margin-bottom:12px;
+}
+.card .big{
+  font-family:"Songti SC",Georgia,serif;font-size:30px;line-height:1.2;font-weight:600;color:var(--deep);
+}
+.card .big small{font-size:14px;color:var(--muted);font-family:inherit;font-weight:400;margin-left:4px}
+.card p{font-size:13.5px;color:var(--muted);margin-top:8px}
+.card.accent{background:linear-gradient(150deg,#fff 0%,#f2fbfa 100%);border-color:#bfe6e2}
+.card.accent::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--teal)}
+.card.warn{background:linear-gradient(150deg,#fff 0%,#fff5f1 100%);border-color:#ffd3c5}
+.card.warn::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--coral)}
+
+/* ---------- TIDE ---------- */
+.tide-wrap{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 20px 16px;box-shadow:var(--shadow);margin-bottom:18px;
+}
+.tide-wrap h3{font-size:15px;font-weight:600;margin-bottom:2px}
+.tide-wrap .hint{font-size:12.5px;color:var(--muted);margin-bottom:14px}
+svg.chart{width:100%;height:auto}
+.tide-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}
+.tide-table th,.tide-table td{padding:12px 10px;text-align:left;border-bottom:1px solid var(--line)}
+.tide-table th{font-size:12px;letter-spacing:.1em;color:var(--muted);font-weight:600}
+.tide-table td:first-child{font-weight:600;color:var(--deep)}
+.tide-table tr:last-child td{border-bottom:0}
+.pill{display:inline-block;font-size:12px;padding:3px 10px;border-radius:999px;background:var(--teal-soft);color:#0a6b68;font-weight:600}
+.pill.coral{background:var(--coral-soft);color:#c14120}
+
+/* ---------- TIMELINE ---------- */
+.day-banner{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;
+  padding:18px 22px;border-radius:16px;margin-bottom:26px;
+  background:linear-gradient(100deg,var(--deep),#0b5f70);
+  color:#fff;box-shadow:var(--shadow);
+}
+.day-banner .d{font-family:"Songti SC",Georgia,serif;font-size:22px;font-weight:600}
+.day-banner .m{font-size:13px;color:#a9dbd9;letter-spacing:.12em}
+.day-banner .s{margin-left:auto;font-size:12.5px;color:#cfe9ea}
+.timeline{list-style:none;position:relative}
+.timeline::before{
+  content:"";position:absolute;left:78px;top:12px;bottom:12px;width:2px;
+  background:linear-gradient(to bottom,var(--teal),#bfe6e2 60%,transparent);
+}
+.timeline li{
+  position:relative;display:grid;grid-template-columns:64px 1fr;gap:26px;
+  padding:11px 0;
+}
+.timeline li::before{
+  content:"";position:absolute;left:73px;top:21px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:2.5px solid var(--teal);z-index:2;
+}
+.timeline .t{
+  font-variant-numeric:tabular-nums;font-size:14px;font-weight:600;color:var(--sea);
+  text-align:right;padding-top:1px;letter-spacing:.02em;
+}
+.timeline .b{font-size:14.5px;color:#20343c;padding-bottom:2px}
+.timeline .b b{font-weight:600}
+.timeline .note{display:block;font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.6}
+.timeline li.key::before{background:var(--coral);border-color:var(--coral);box-shadow:0 0 0 5px rgba(255,106,69,.14)}
+.timeline li.key .t{color:var(--coral)}
+.timeline li.key .b{font-weight:600}
+.timeline li.sleep::before{background:#8fb8bd;border-color:#8fb8bd;box-shadow:none}
+@media(max-width:640px){
+  .timeline::before{left:52px}
+  .timeline li{grid-template-columns:44px 1fr;gap:20px}
+  .timeline li::before{left:47px;top:22px;width:10px;height:10px}
+  .timeline .t{font-size:12.5px}
+  .timeline .b{font-size:14px}
+}
+
+/* ---------- TABLES ---------- */
+.tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);font-size:14px}
+.tbl th{background:#f3efe4;font-size:12px;letter-spacing:.08em;color:#5c6b72;text-align:left;padding:13px 14px;font-weight:600}
+.tbl td{padding:13px 14px;border-top:1px solid var(--line);vertical-align:top}
+.tbl td.mono{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl tr.total td{background:#f7fbfa;font-weight:700;color:var(--deep)}
+
+/* ---------- CHECKLIST ---------- */
+.check{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+@media(max-width:700px){.check{grid-template-columns:1fr}}
+.check label{
+  display:flex;gap:11px;align-items:flex-start;
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:13px 15px;font-size:14px;cursor:pointer;transition:.18s;
+}
+.check label:hover{border-color:#bfe6e2;transform:translateY(-1px)}
+.check input{
+  appearance:none;width:19px;height:19px;flex:0 0 auto;margin-top:2px;
+  border:1.8px solid #c3cfd3;border-radius:6px;transition:.18s;position:relative;cursor:pointer;
+}
+.check input:checked{background:var(--teal);border-color:var(--teal)}
+.check input:checked::after{
+  content:"";position:absolute;left:5.5px;top:2px;width:5px;height:9px;
+  border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);
+}
+.check input:checked ~ span{text-decoration:line-through;color:var(--muted)}
+
+/* ---------- TIPS ---------- */
+.tips{display:grid;gap:14px}
+.tip{
+  display:grid;grid-template-columns:36px 1fr;gap:14px;
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;
+}
+.tip .n{
+  width:30px;height:30px;border-radius:50%;background:var(--teal-soft);color:#0a6b68;
+  display:grid;place-items:center;font-size:13px;font-weight:700;font-family:Georgia,serif;
+}
+.tip h4{font-size:14.5px;margin-bottom:3px;font-weight:600}
+.tip p{font-size:13.5px;color:var(--muted)}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:var(--deep);color:#9fc3c9;padding:46px 22px 56px;margin-top:10px;
+  font-size:12.5px;line-height:1.9;
+}
+.foot-inner{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between}
+footer b{color:#e8f5f4;font-weight:600;display:block;font-size:13.5px;margin-bottom:6px}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- PRINT ---------- */
+@media print{
+  .toc,.wave{display:none}
+  body{background:#fff}
+  .hero{background:#fff!important;color:#000;padding:20px 0}
+  .hero h1,.sub,.kicker{color:#000!important;text-shadow:none}
+  .kicker{border-color:#999}
+  .badge{border-color:#bbb;color:#333;background:#f6f6f6}
+  section{page-break-inside:avoid;padding:18px 0}
+  .card,.tbl,.timeline li{box-shadow:none}
+  .reveal{opacity:1;transform:none}
+  .day-banner{background:#eee!important;color:#000}
+  .day-banner .m,.day-banner .s{color:#444}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="kicker"><span class="dot"></span>2026.11.25 — 11.26 · 广东湛江</span>
+    <h1>硇洲岛</h1>
+    <p class="sub">两天一夜 · 中国第一大火山岛 · 凌晨赶海计划</p>
+    <div class="badges">
+      <span class="badge">出发 <strong>高州</strong> 09:00</span>
+      <span class="badge">2 天 1 夜</span>
+      <span class="badge">自驾 <strong>1 车</strong></span>
+      <span class="badge">赶海 <strong>04:00</strong></span>
+      <span class="badge">回程 <strong>16:00 船</strong></span>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,64 C180,110 300,20 480,42 C660,64 760,120 940,96 C1120,72 1260,10 1440,38 L1440,120 L0,120 Z" fill="#fbf8f2"/>
+  </svg>
+</header>
+
+<nav class="toc">
+  <div class="toc-inner">
+    <a href="#brief">关键情报</a>
+    <a href="#tide">潮汐</a>
+    <a href="#day1">第一天</a>
+    <a href="#day2">第二天</a>
+    <a href="#ferry">船班</a>
+    <a href="#budget">预算</a>
+    <a href="#pack">装备</a>
+    <a href="#safety">安全</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 1 -->
+  <section id="brief">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <div>
+        <h2>关键情报</h2>
+        <p class="sec-sub">这三条决定了整个行程的骨架</p>
+      </div>
+    </div>
+
+    <p class="lead reveal">11 月 26 日凌晨正好落在“退潮赶海”的黄金窗口，低潮 06:35、潮位仅 0.4 米。而当天车渡 07:00–08:30 停航、08:30 恢复，和赶海收工的时间刚好接得上。</p>
+
+    <div class="grid g3">
+      <div class="card accent reveal">
+        <span class="tag">TIDE · 11/26</span>
+        <div class="big">06:35<small>低潮 0.4m</small></div>
+        <p>赶海窗口 02:35–06:35，农历十八 · 中潮 · 活汛。04:00 下海，潮水正一路退到底。</p>
+      </div>
+      <div class="card warn reveal">
+        <span class="tag">FERRY · 11/26</span>
+        <div class="big">08:30<small>恢复通航</small></div>
+        <p>车渡 07:00–08:30 停航（潮汐原因），08:30 起双向恢复。快艇客船不受影响。</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">WEATHER</span>
+        <div class="big">20℃<small>多云</small></div>
+        <p>11/25 阴、东北风 4 级；11/26 多云、3 级、浪 0.6m。海岛早晚凉，带件薄外套。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section id="tide">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <div>
+        <h2>潮汐：为什么是凌晨 4 点</h2>
+        <p class="sec-sub">硇洲岛（北港）潮汐表 · 天文潮，实际会有偏差</p>
+      </div>
+    </div>
+
+    <div class="tide-wrap reveal">
+      <h3>11 月 26 日 潮位曲线</h3>
+      <p class="hint">04:00 出发时潮水尚在退落，06:35 触底 0.4m，06:40 必须开始回撤。</p>
+      <svg class="chart" viewBox="0 0 720 250" role="img" aria-label="11月26日潮位曲线，低潮06:35为0.4米">
+        <defs>
+          <linearGradient id="tideFill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#14a3a2" stop-opacity=".38"/>
+            <stop offset="100%" stop-color="#14a3a2" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- grid -->
+        <g stroke="#ece7db" stroke-width="1">
+          <line x1="40" y1="210" x2="700" y2="210"/>
+          <line x1="40" y1="170" x2="700" y2="170"/>
+          <line x1="40" y1="130" x2="700" y2="130"/>
+          <line x1="40" y1="90"  x2="700" y2="90"/>
+          <line x1="40" y1="50"  x2="700" y2="50"/>
+        </g>
+        <g fill="#9aa9ad" font-size="10" font-family="system-ui,sans-serif">
+          <text x="18" y="214">0m</text>
+          <text x="18" y="174">1m</text>
+          <text x="18" y="134">2m</text>
+          <text x="18" y="94">3m</text>
+          <text x="18" y="54">4m</text>
+          <text x="36" y="230">00</text>
+          <text x="176" y="230">06</text>
+          <text x="316" y="230">12</text>
+          <text x="456" y="230">18</text>
+          <text x="688" y="230">24</text>
+        </g>
+        <!-- area + line -->
+        <path d="M40,50 C90,60 150,120 221,194 C270,215 340,160 392,110 C440,88 470,120 511,146 C560,112 640,60 700,42 L700,210 L40,210 Z" fill="url(#tideFill)"/>
+        <path d="M40,50 C90,60 150,120 221,194 C270,215 340,160 392,110 C440,88 470,120 511,146 C560,112 640,60 700,42" fill="none" stroke="#0b5f70" stroke-width="2.6" stroke-linecap="round"/>
+        <!-- 4am marker -->
+        <line x1="150" y1="40" x2="150" y2="210" stroke="#ff6a45" stroke-width="1.4" stroke-dasharray="4 4"/>
+        <circle cx="150" cy="152" r="4.5" fill="#ff6a45"/>
+        <text x="140" y="34" fill="#ff6a45" font-size="11" font-weight="600" font-family="system-ui,sans-serif">04:00 出发</text>
+        <!-- low -->
+        <circle cx="221" cy="194" r="5.5" fill="#fff" stroke="#0b5f70" stroke-width="3"/>
+        <text x="232" y="188" fill="#0b5f70" font-size="11" font-weight="600" font-family="system-ui,sans-serif">低潮 06:35 · 0.4m</text>
+        <!-- high -->
+        <circle cx="392" cy="110" r="5" fill="#fff" stroke="#14a3a2" stroke-width="2.6"/>
+        <text x="402" y="102" fill="#0a6b68" font-size="11" font-family="system-ui,sans-serif">满潮 12:48 · 2.5m</text>
+      </svg>
+    </div>
+
+    <table class="tide-table reveal">
+      <thead>
+        <tr><th>日期</th><th>农历</th><th>潮况</th><th>低潮</th><th>高潮</th><th>赶海窗口</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>11/25 周三</td><td>十七</td><td><span class="pill">巨潮 · 活汛</span></td>
+          <td>05:30 · 0.5m<br>16:24 · 1.5m</td>
+          <td>11:52 · 2.6m<br>23:14 · 4.2m</td>
+          <td>01:30–05:30</td>
+        </tr>
+        <tr>
+          <td>11/26 周四</td><td>十八</td><td><span class="pill coral">中潮 · 活汛</span></td>
+          <td><b>06:35 · 0.4m</b><br>17:07 · 1.6m</td>
+          <td>12:48 · 2.5m</td>
+          <td><b>02:35–06:35</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 3 -->
+  <section id="day1">
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <div>
+        <h2>第一天 · 上岛</h2>
+        <p class="sec-sub">11 月 25 日 周三 · 高州 → 东南码头 → 那晏海石滩</p>
+      </div>
+    </div>
+
+    <div class="day-banner reveal">
+      <span class="d">Day 1</span>
+      <span class="m">11/25 WED</span>
+      <span class="s">车程 ≈ 150km / 2.5h　·　船程 30min</span>
+    </div>
+
+    <ul class="timeline">
+      <li class="reveal"><span class="t">08:40</span><div class="b">出发前 20 分钟<small class="note">加满油、买水和面包当早饭。导航直接设「东海岛东南码头」，别设「硇洲岛」，会导到海上。</small></div></li>
+      <li class="key reveal"><span class="t">09:00</span><div class="b">从高州出发<small class="note">走高速往湛江方向，全程约 150 公里。留 3 小时比 2.5 小时更稳。</small></div></li>
+      <li class="key reveal"><span class="t">11:30</span><div class="b">抵达东南码头，买车渡票<small class="note">售票窗口在车渡入口，客渡码头再往前 10 米。<b>只能现场买</b>，小车含司机 83 元，乘客 8 元/人。买完把车排进车队，等 12:00 整点开船。</small></div></li>
+      <li class="reveal"><span class="t">12:00</span><div class="b">车渡渡海 · 30 分钟<small class="note">开船后上甲板吹风，海水会从浑黄变成湛蓝。</small></div></li>
+      <li class="reveal"><span class="t">12:30</span><div class="b">午饭：码头海鲜大排档<small class="note">硇洲鲍鱼（国家地理标志）、花蟹、沙虫粥、海鲜炒粉。问清单价、当面过秤。</small></div></li>
+      <li class="reveal"><span class="t">14:00</span><div class="b">入住民宿<small class="note">首选那晏村 / 存亮湾一带，明早 4 点出门 5 分钟到海滩；次选码头附近，吃饭方便。</small></div></li>
+      <li class="key reveal"><span class="t">15:30</span><div class="b">那晏海石滩<small class="note">火山岩海蚀地貌、玄武岩柱状节理，全岛最出片的地方。16:24 是低潮，礁石露得多。别走太远、别踩湿滑苔藓石。</small></div></li>
+      <li class="reveal"><span class="t">17:55</span><div class="b">日落<small class="note">西侧海岸或民宿天台。</small></div></li>
+      <li class="reveal"><span class="t">18:30</span><div class="b">晚饭<small class="note">回码头吃海鲜，人均 60–90 元合理，别去拉客最凶的店。</small></div></li>
+      <li class="key reveal"><span class="t">20:00</span><div class="b">采购赶海装备<small class="note">头灯、防滑鞋、厚手套、小桶、夹子、小铲。<b>今晚必须买齐</b>，凌晨 4 点没有店开门。</small></div></li>
+      <li class="sleep reveal"><span class="t">21:30</span><div class="b">睡觉<small class="note">明天 03:40 起床。</small></div></li>
+    </ul>
+  </section>
+
+  <!-- 4 -->
+  <section id="day2">
+    <div class="sec-head reveal">
+      <span class="sec-num">04</span>
+      <div>
+        <h2>第二天 · 赶海 + 补觉 + 半日游</h2>
+        <p class="sec-sub">11 月 26 日 周四 · 先睡饱，再出去玩，16:00 船回家</p>
+      </div>
+    </div>
+
+    <div class="day-banner reveal">
+      <span class="d">Day 2</span>
+      <span class="m">11/26 THU</span>
+      <span class="s">低潮 06:35　·　08:30 复航　·　16:00 返程</span>
+    </div>
+
+    <ul class="timeline">
+      <li class="reveal"><span class="t">03:40</span><div class="b">起床<small class="note">长袖长裤、防滑鞋、头灯。吃两口面包，别空腹下海。</small></div></li>
+      <li class="key reveal"><span class="t">04:00</span><div class="b">赶海 · 2.5 小时<small class="note">地点选那晏海石滩 / 存亮湾，离民宿最近的一处就够。天全黑只能打头灯，跟着退潮线慢慢往外走。</small></div></li>
+      <li class="reveal"><span class="t">06:35</span><div class="b">最低潮 · 0.4m<small class="note">收获最多的时候，也是必须开始回撤的时候。06:40 一定往回走。</small></div></li>
+      <li class="reveal"><span class="t">06:54</span><div class="b">海边日出<small class="note">东边海平面，正好收尾。</small></div></li>
+      <li class="reveal"><span class="t">07:00</span><div class="b">回民宿冲热水澡 + 早餐<small class="note">海水和沙子黏着睡不沉，先洗再睡。喝碗热粥。</small></div></li>
+      <li class="sleep key reveal"><span class="t">07:40</span><div class="b">补觉 · 约 4 小时<small class="note">拉严窗帘、眼罩耳塞、手机静音，定 11:20 和 11:25 两个闹钟。前一晚就跟老板说好 12:00 退房、上午别敲门。</small></div></li>
+      <li class="key reveal"><span class="t">11:30</span><div class="b">起床洗漱、收拾行李<small class="note">刚好避开 12:48 的满潮，起床时潮水开始退。</small></div></li>
+      <li class="reveal"><span class="t">12:00</span><div class="b">退房装车<small class="note">标准退房时间，不用求延时。</small></div></li>
+      <li class="reveal"><span class="t">12:10</span><div class="b">午饭：码头海鲜<small class="note">吃慢一点，下午才有力气。</small></div></li>
+      <li class="reveal"><span class="t">13:15</span><div class="b">硇洲灯塔<small class="note">1899 年法国人所建，火山岩塔身，世界仅存两座水晶磨镜灯塔之一，全国重点文保。多数时间不开放登塔，外观拍照 20–30 分钟。</small></div></li>
+      <li class="reveal"><span class="t">14:05</span><div class="b">宋皇井 / 宋皇村<small class="note">南宋末年遗迹，免费，顺路停 20 分钟。</small></div></li>
+      <li class="reveal"><span class="t">14:40</span><div class="b">硇洲码头海鲜市场<small class="note">下午渔船回港最热闹。买鲍鱼、虾、蟹，让摊主杀好洗净，加泡沫箱 + 冰袋（10–20 元）能撑 4–5 小时。</small></div></li>
+      <li class="reveal"><span class="t">15:20</span><div class="b">存亮湾 / 环岛路<small class="note">可选项。此时开始退潮（17:07 低潮 1.6m），踩水拍照刚好；时间紧就直接去码头。</small></div></li>
+      <li class="key reveal"><span class="t">15:45</span><div class="b">到码头排队<small class="note">车渡要排队、要一辆辆上船，提前 30–40 分钟到。</small></div></li>
+      <li class="key reveal"><span class="t">16:00</span><div class="b">车渡返程<small class="note">30 分钟到东南码头。</small></div></li>
+      <li class="reveal"><span class="t">19:00</span><div class="b">回到高州<small class="note">全程基本在天黑前，比赶 17:30 末班船安全得多。</small></div></li>
+    </ul>
+  </section>
+
+  <!-- 5 -->
+  <section id="ferry">
+    <div class="sec-head reveal">
+      <span class="sec-num">05</span>
+      <div>
+        <h2>船班与票价</h2>
+        <p class="sec-sub">冬季班次（2026.10.9 – 2027.4.30）· 全部现场购票</p>
+      </div>
+    </div>
+
+    <table class="tbl reveal">
+      <thead>
+        <tr><th>方式</th><th>票价</th><th>航程</th><th>班次</th><th>备注</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>快艇客船</b></td>
+          <td>25 元/人</td>
+          <td>约 20 分钟</td>
+          <td>07:00–18:00，每 30 分钟一班</td>
+          <td>不受潮汐影响，客满即开</td>
+        </tr>
+        <tr>
+          <td><b>车渡船</b></td>
+          <td>小车含司机 83 元<br>成人 8 元/人</td>
+          <td>约 30 分钟</td>
+          <td>07:00 首班、17:30 末班，整点发船</td>
+          <td>车能一起上岛，环岛最自由</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="grid g2" style="margin-top:16px">
+      <div class="card warn reveal">
+        <span class="tag">⚠ 11/26 特别通知</span>
+        <p style="margin-top:0;color:#33474f;font-size:14px">车渡 <b>07:00–08:30 停航</b>，08:30 起恢复双向通航。这就是为什么返程定在 16:00 而不是赶早班。</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">☎ 电话</span>
+        <p style="margin-top:0;color:#33474f;font-size:14px">票务 <b>0759-2111156</b>（07:00–17:30）<br>办公室 <b>0759-2111126</b>（08:00–12:00 / 14:30–18:00）</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section id="budget">
+    <div class="sec-head reveal">
+      <span class="sec-num">06</span>
+      <div>
+        <h2>预算参考</h2>
+        <p class="sec-sub">按 2 人 1 车估算，淡季</p>
+      </div>
+    </div>
+
+    <table class="tbl reveal">
+      <thead><tr><th>项目</th><th>说明</th><th style="text-align:right">金额</th></tr></thead>
+      <tbody>
+        <tr><td>油费 + 过路费</td><td>往返约 300km</td><td class="mono" style="text-align:right">260–300 元</td></tr>
+        <tr><td>车渡往返</td><td>83×2 + 8×2×2</td><td class="mono" style="text-align:right">182 元</td></tr>
+        <tr><td>民宿 1 晚</td><td>淡季海景房</td><td class="mono" style="text-align:right">200–400 元</td></tr>
+        <tr><td>餐饮</td><td>3 正 1 早 + 海鲜</td><td class="mono" style="text-align:right">350–500 元</td></tr>
+        <tr><td>海鲜打包</td><td>泡沫箱 + 冰袋 + 货</td><td class="mono" style="text-align:right">200–400 元</td></tr>
+        <tr><td>赶海装备</td><td>头灯、鞋、手套、桶</td><td class="mono" style="text-align:right">60–100 元</td></tr>
+        <tr class="total"><td>合计</td><td>2 人 1 车</td><td class="mono" style="text-align:right">约 1250–1900 元</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 7 -->
+  <section id="pack">
+    <div class="sec-head reveal">
+      <span class="sec-num">07</span>
+      <div>
+        <h2>出发清单</h2>
+        <p class="sec-sub">点一下就能打勾，刷新也不会丢</p>
+      </div>
+    </div>
+
+    <div class="check">
+      <label><input type="checkbox" data-k="p1"><span>头灯或强光手电 ×2（凌晨全靠它）</span></label>
+      <label><input type="checkbox" data-k="p2"><span>防滑溯溪鞋 / 旧运动鞋</span></label>
+      <label><input type="checkbox" data-k="p3"><span>厚手套（防割伤、防螃蟹夹）</span></label>
+      <label><input type="checkbox" data-k="p4"><span>小桶 + 夹子 + 小铲</span></label>
+      <label><input type="checkbox" data-k="p5"><span>长袖长裤 + 薄外套</span></label>
+      <label><input type="checkbox" data-k="p6"><span>创可贴、碘伏、常备药</span></label>
+      <label><input type="checkbox" data-k="p7"><span>眼罩 + 耳塞（白天补觉必备）</span></label>
+      <label><input type="checkbox" data-k="p8"><span>充电宝 + 车充</span></label>
+      <label><input type="checkbox" data-k="p9"><span>保温杯 / 热水（凌晨暖身）</span></label>
+      <label><input type="checkbox" data-k="p10"><span>泡沫箱 + 冰袋（打包海鲜回来）</span></label>
+    </div>
+  </section>
+
+  <!-- 8 -->
+  <section id="safety">
+    <div class="sec-head reveal">
+      <span class="sec-num">08</span>
+      <div>
+        <h2>安全与避坑</h2>
+        <p class="sec-sub">赶海是玩，不是冒险</p>
+      </div>
+    </div>
+
+    <div class="tips">
+      <div class="tip reveal"><div class="n">1</div><div><h4>三条死线</h4><p>最晚 11:30 起床 · 最晚 15:45 到码头 · 绝不把 17:30 末班船当备选。官方明确提醒过不要卡点赶末班船。</p></div></div>
+      <div class="tip reveal"><div class="n">2</div><div><h4>赶海三不要</h4><p>不单独走远、不背对大海、不进没过小腿的深水区和湿滑礁石缝。06:35 之后潮水开始涨，06:40 必须回撤。</p></div></div>
+      <div class="tip reveal"><div class="n">3</div><div><h4>只取所需</h4><p>小于手掌的贝类、海星、活珊瑚放回去。火山岩锋利，摔一跤就是深口子。</p></div></div>
+      <div class="tip reveal"><div class="n">4</div><div><h4>疲劳驾驶</h4><p>凌晨 4 点起、玩一整天，15:00–17:00 那段高速最危险。撑不住就让同伴开，或者砍掉存亮湾直接坐 15:00 的船。</p></div></div>
+      <div class="tip reveal"><div class="n">5</div><div><h4>出岛前确认船班</h4><p>打 0759-2111156 确认当天实际复航时间。大风 6 级以上或下雨时渡船可能临时停航。</p></div></div>
+      <div class="tip reveal"><div class="n">6</div><div><h4>吃海鲜先问价</h4><p>按斤计价、当面过秤，别去拉客最凶的店。加工费一般 10–20 元/斤。</p></div></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div>
+      <b>硇洲岛两天一夜</b>
+      2026.11.25 — 11.26　高州出发<br>
+      愿你凌晨四点的桶里，装满花甲和小螃蟹。
+    </div>
+    <div>
+      <b>数据来源</b>
+      湛江市经开区航运有限公司 2026 年 11 月车渡公告<br>
+      潮汐表精灵（硇洲岛·北港）· 湛江本地宝 · 湛江海事
+    </div>
+  </div>
+  <div class="foot-inner" style="margin-top:22px;opacity:.6">
+    <span>潮汐为天文预测，实际受天气影响，请以当天实测为准。</span>
+  </div>
+</footer>
+
+<script>
+// 滚动高亮目录
+const links=[...document.querySelectorAll('.toc a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const setActive=()=>{
+  const y=window.scrollY+120;
+  let idx=0;
+  secs.forEach((s,i)=>{if(s&&s.offsetTop<=y)idx=i;});
+  links.forEach((l,i)=>l.classList.toggle('active',i===idx));
+};
+addEventListener('scroll',setActive,{passive:true});
+setActive();
+
+// 渐显
+const io=new IntersectionObserver((es)=>{
+  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// 清单本地保存
+const KEY='naozhou-pack-v1';
+let saved={};
+try{saved=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){}
+document.querySelectorAll('.check input').forEach(cb=>{
+  if(saved[cb.dataset.k])cb.checked=true;
+  cb.addEventListener('change',()=>{
+    saved[cb.dataset.k]=cb.checked;
+    try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}
+  });
+});
+</script>
+</body>
+</html>
