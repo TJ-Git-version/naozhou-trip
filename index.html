@@ -211,9 +211,18 @@ svg.chart{width:100%;height:auto}
 .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius);box-shadow:var(--shadow)}
 .tbl-wrap .tbl{box-shadow:none;border-radius:0}
 @media(max-width:700px){
-  .tbl-wrap .tbl{min-width:600px}
+  .tbl-wrap .tbl,.tbl-wrap .tide-table{min-width:600px}
+  .tide-table td,.tide-table th{white-space:nowrap}
   .tbl{font-size:13px}
   .tbl th,.tbl td{padding:11px 12px}
+}
+.tbl-wrap{position:relative}
+@media(max-width:700px){
+  .tbl-wrap::after{
+    content:"← 左右滑动查看 →";
+    display:block;text-align:center;font-size:11px;color:var(--muted);
+    padding:8px 0 2px;letter-spacing:.08em;
+  }
 }
 .tbl th{background:#f3efe4;font-size:12px;letter-spacing:.08em;color:#5c6b72;text-align:left;padding:13px 14px;font-weight:600}
 .tbl td{padding:13px 14px;border-top:1px solid var(--line);vertical-align:top}
@@ -403,7 +412,7 @@ footer b{color:#e8f5f4;font-weight:600;display:block;font-size:13.5px;margin-bot
       </svg>
     </div>
 
-    <table class="tide-table reveal">
+    <div class="tbl-wrap reveal"><table class="tide-table">
       <thead>
         <tr><th>日期</th><th>农历</th><th>潮况</th><th>低潮</th><th>高潮</th><th>赶海窗口</th></tr>
       </thead>
@@ -421,7 +430,7 @@ footer b{color:#e8f5f4;font-weight:600;display:block;font-size:13.5px;margin-bot
           <td><b>02:35–06:35</b></td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
   </section>
 
   <!-- 3 -->
